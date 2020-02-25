@@ -1,0 +1,22 @@
+<div>
+    <mat-toolbar color="primary">
+        <span>App Thang</span>
+        <span class="fill-space"></span>
+            <button mat-icon-button (click)="sideNavElement.toggle()"> 
+                <mat-icon>menu</mat-icon>
+            </button>
+    </mat-toolbar>
+    <mat-sidenav-container [hasBackdrop]="true">
+        <mat-sidenav #sideNavElement position="end"> 
+            <mat-nav-list>
+                side nave list works
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="height: 500px;">
+                sidenav content works
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+<p>layout works!</p>

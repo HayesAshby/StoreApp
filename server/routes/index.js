@@ -6,5 +6,14 @@ router.get('/health', (req, res) => {
 
 
 })
+router.get('/data', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.status(200).json({
+    name: 'bob',
+    data: 'unicorns and milkshakes'
+  });
+
+
+})
 
 module.exports = router;
