@@ -7,11 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CatalogItemComponent implements OnInit {
 
-@Input() public productName;
+@Input() public title;
+@Input() public description;
 @Input() public price;
+@Input() public rating;
+@Input() public filename;
+
+public path; // = `assets/images/${this.filename}`;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.filename);
+    this.path = `assets/images/${this.filename}`;
   }
 
 }

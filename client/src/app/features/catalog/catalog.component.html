@@ -1,8 +1,18 @@
 <p>catalog works!</p>
 
-<app-catalog-item 
-    *ngFor="let product of products"
-    [productName]="product.productName"
-    [price]="product.price"
-    >
-</app-catalog-item>
+
+<mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile *ngFor="let product of products">
+        
+        <app-catalog-item 
+            
+            [title]="product.title"
+            [description]="product.description"
+            [price]="product.price"
+            [rating]="product.rating"
+            [filename]="product.filename"
+            >
+        </app-catalog-item>
+        
+    </mat-grid-tile>
+  </mat-grid-list>

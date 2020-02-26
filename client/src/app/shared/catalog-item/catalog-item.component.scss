@@ -1,5 +1,8 @@
 .catalog-item {
-    width: 150px;
+    margin: 20px;
+    img {
+        overflow: hidden;
+    }
 }
 
 .catalog-item-card {

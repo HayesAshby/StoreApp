@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { data } from '../../../assets/products.json';
 
 @Component({
   selector: 'app-catalog',
@@ -7,40 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogComponent implements OnInit {
 
-  public products = [
-    {
-      productName: 'dog',
-      price: 5
-    },
-    {
-      productName: 'dog',
-      price: 5
-    },
-    {
-      productName: 'dog',
-      price: 5
-    },
-    {
-      productName: 'dog',
-      price: 5
-    },
-    {
-      productName: 'dog',
-      price: 5
-    },
-    {
-      productName: 'dog',
-      price: 5
-    },
-    {
-      productName: 'dog',
-      price: 5
-    },
-  ];
+  public products = data;
+
+  // [
+  //   {
+  //     title: 'dog',
+  //     price: 5,
+  //     description: 'dogs',
+  //     rating: 1
+  //   },
+  //   {
+  //     title: 'dog',
+  //     price: 5,
+  //     description: 'dogs',
+  //     rating: 1
+  //   },
+  //   {
+  //     title: 'dog',
+  //     price: 5,
+  //     description: 'dogs',
+  //     rating: 1
+  //   },
+  // ];
+
+
+
 
   constructor() { }
 
-  ngOnInit(): void {
+ngOnInit(): void {
+  console.log(data);
   }
 
 }

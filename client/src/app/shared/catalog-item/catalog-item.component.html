@@ -1,8 +1,10 @@
 <mat-card class="catalog-item">
-    <img class="catalog-item-card" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <img class="catalog-item-card" mat-card-image src={{path}} height="150px">
     <mat-card-content class="catalog-item-card">
-        {{productName}}
+        {{title}}
+        <!-- {{description}} -->
         {{price}}
+        {{rating}}
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color="primary">Add To Cart</button>

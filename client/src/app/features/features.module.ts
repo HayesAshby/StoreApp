@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { CatalogComponent } from './catalog/catalog.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [LayoutComponent, CatalogComponent],
@@ -20,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
     MatButtonModule,
     MatIconModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    MatGridListModule
   ]
 })
 export class FeaturesModule { }
