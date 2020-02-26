@@ -6,17 +6,21 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutComponent } from './layout/layout.component';
 import { MatIconModule } from '@angular/material/icon';
-
+import { CatalogComponent } from './catalog/catalog.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent, CatalogComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule,
+    SharedModule
   ]
 })
 export class FeaturesModule { }

@@ -1,23 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './features/layout/layout.component';
-
+import { CatalogComponent } from './features/catalog/catalog.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    children: [
       {
         path: '',
-        pathMatch: 'full',
-        redirectTo: 'dashboard',
+        component: LayoutComponent,
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'catalog'
+          },
+          {
+            path: 'catalog',
+            component: CatalogComponent
+          }
+        ]
       },
-      {
-        path: 'dashboard',
-        component: LayoutComponent
-      }
-    ]
-  }
 ];
 
 @NgModule({

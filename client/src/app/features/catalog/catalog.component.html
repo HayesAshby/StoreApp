@@ -1,0 +1,8 @@
+<p>catalog works!</p>
+
+<app-catalog-item 
+    *ngFor="let product of products"
+    [productName]="product.productName"
+    [price]="product.price"
+    >
+</app-catalog-item>
