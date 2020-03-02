@@ -1,0 +1,21 @@
+
+<mat-icon *ngIf="rating >= 1; else one">star</mat-icon>
+<ng-template #one>
+    <mat-icon>star_outline</mat-icon>
+</ng-template>
+<mat-icon *ngIf="rating >= 2; else two"> star</mat-icon>
+<ng-template #two>
+    <mat-icon>star_outline</mat-icon>
+</ng-template>
+<mat-icon *ngIf="rating >= 3; else three">star</mat-icon>
+<ng-template #three>
+    <mat-icon>star_outline</mat-icon>
+</ng-template>
+<mat-icon *ngIf="rating >= 4; else four">star</mat-icon>
+<ng-template #four>
+    <mat-icon>star_outline</mat-icon>
+</ng-template>
+<mat-icon *ngIf="rating >= 5; else five">star</mat-icon>
+<ng-template #five>
+    <mat-icon>star_outline</mat-icon>
+</ng-template>

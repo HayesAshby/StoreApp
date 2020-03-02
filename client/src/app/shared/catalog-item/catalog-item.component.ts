@@ -18,7 +18,6 @@ public path; // = `assets/images/${this.filename}`;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.filename);
     this.path = `assets/images/${this.filename}`;
   }
 

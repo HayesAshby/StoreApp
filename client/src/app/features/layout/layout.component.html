@@ -1,11 +1,10 @@
-<div>
-    <mat-toolbar color="primary">
-        <span>App Thang</span>
+<mat-toolbar color="primary">
+        <span>Hipster Eats</span>
         <span class="fill-space"></span>
             <button mat-icon-button (click)="sideNavElement.toggle()"> 
                 <mat-icon>shopping_cart</mat-icon>
             </button>
-    </mat-toolbar>
+</mat-toolbar>
     <mat-sidenav-container [hasBackdrop]="true">
         <mat-sidenav #sideNavElement position="end"> 
             <mat-nav-list>
@@ -13,9 +12,9 @@
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-            <div style="height: 500px;">
+            <div>
                 <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
-</div>
+
