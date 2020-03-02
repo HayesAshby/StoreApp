@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from '../../../assets/products.json';
+import { Store } from '@ngrx/store';
+import { State } from '../../reducers';
+import { loadCardsInfos } from 'src/app/actions/cards-info.actions';
+import { Observable } from 'rxjs';
+import { CardInfoModel } from 'src/app/reducers/card-info.model';
+import { tap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-catalog',
@@ -8,36 +14,18 @@ import { data } from '../../../assets/products.json';
 })
 export class CatalogComponent implements OnInit {
 
-  public products = data;
+  public products$: Observable<CardInfoModel[]>;
 
-  // [
-  //   {
-  //     title: 'dog',
-  //     price: 5,
-  //     description: 'dogs',
-  //     rating: 1
-  //   },
-  //   {
-  //     title: 'dog',
-  //     price: 5,
-  //     description: 'dogs',
-  //     rating: 1
-  //   },
-  //   {
-  //     title: 'dog',
-  //     price: 5,
-  //     description: 'dogs',
-  //     rating: 1
-  //   },
-  // ];
+  constructor(private store: Store<State>) {
+    this.store.dispatch(loadCardsInfos());
 
+  }
 
-
-
-  constructor() { }
-
-ngOnInit(): void {
-  console.log(data);
+  ngOnInit(): void {
+    this.products$ = this.store
+      .select(state => state.cardInfoState.cardInfo).pipe(
+        tap(datas => { console.log('REACHED', datas) })
+      );
   }
 
 }

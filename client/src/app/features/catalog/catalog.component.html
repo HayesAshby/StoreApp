@@ -1,13 +1,6 @@
-
- <div class="container">
-        
-        <app-catalog-item *ngFor="let product of products"
-            
-            [title]="product.title"
-            [description]="product.description"
-            [price]="product.price"
-            [rating]="product.rating"
-            [filename]="product.filename"
-            >
-        </app-catalog-item>
-        </div>
+<div class="container">
+    <app-catalog-item *ngFor="let product of products$ | async" [title]="product.title"
+        [description]="product.description" [price]="product.price" [rating]="product.rating"
+        [filename]="product.filename">
+    </app-catalog-item>
+</div>
