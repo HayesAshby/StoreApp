@@ -1,6 +1,4 @@
 <div class="container">  
-    <app-product-item *ngFor="let product of products$ | async" [title]="product.title"
-        [description]="product.description" [price]="product.price" [rating]="product.rating"
-        [filename]="product.filename">
+    <app-product-item *ngFor="let product of products$ | async" [product]="product">
     </app-product-item>
 </div>

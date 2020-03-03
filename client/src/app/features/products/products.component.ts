@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { State } from '../../reducers';
-import { loadProductInfo } from 'src/app/actions/product-info.actions';
 import { Observable} from 'rxjs';
 import { ProductInfoModel } from 'src/app/reducers/product-info.model';
+import { ProductsService } from './services/products.service';
 
 
 @Component({
@@ -13,16 +11,12 @@ import { ProductInfoModel } from 'src/app/reducers/product-info.model';
 })
 export class ProductsComponent implements OnInit {
 
-  public products$: Observable<ProductInfoModel[]>;
+  public products$: Observable<ProductInfoModel[]> = this.service.getProductInfo();
 
-  constructor(private store: Store<State>) {
-    this.store.dispatch(loadProductInfo());
+  constructor(private service: ProductsService) {}
 
-  }
+  ngOnInit() {
 
-  ngOnInit(): void {
-    this.products$ = this.store
-      .select(state => state.productInfoState.productInfo);
   }
 
 }

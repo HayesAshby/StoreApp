@@ -11,7 +11,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductInfoEffects } from './effects/product-info.effects';
-import { ProductInfoService } from './services/product-info.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,6 @@ import { ProductInfoService } from './services/product-info.service';
     EffectsModule.forRoot([ProductInfoEffects])
     // end ngrx imports
   ],
-  providers: [ProductInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
