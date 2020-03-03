@@ -6,14 +6,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutComponent } from './layout/layout.component';
 import { MatIconModule } from '@angular/material/icon';
-import { CatalogComponent } from './catalog/catalog.component';
+import { ProductsComponent } from './products/products.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
-  declarations: [LayoutComponent, CatalogComponent],
+  declarations: [LayoutComponent, ProductsComponent],
   imports: [
     CommonModule,
     MatSidenavModule,

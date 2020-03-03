@@ -4,11 +4,11 @@ import { State } from 'src/app/reducers';
 import { deleteProduct, addProduct } from 'src/app/actions/product-info.actions';
 
 @Component({
-  selector: 'app-catalog-item',
-  templateUrl: './catalog-item.component.html',
-  styleUrls: ['./catalog-item.component.scss']
+  selector: 'app-product-item',
+  templateUrl: './product-item.component.html',
+  styleUrls: ['./product-item.component.scss']
 })
-export class CatalogItemComponent implements OnInit {
+export class ProductItemComponent implements OnInit {
 
 @Input() public title;
 @Input() public description;

@@ -7,4 +7,6 @@ export class ProductInfoService {
     getProductInfo(): Observable<any> {
         return of(data);
     }
+
+    
 }
