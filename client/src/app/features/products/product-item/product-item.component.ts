@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductInfoModel } from 'src/app/reducers/product-info.model';
-import { ProductsService } from '../services/products.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-item',
@@ -13,7 +13,7 @@ export class ProductItemComponent implements OnInit {
 
 public path;
 
-  constructor(private service: ProductsService) { }
+  constructor(private service: ProductService) { }
 
   ngOnInit(): void {
     this.path = `assets/images/${this.product.filename}`;

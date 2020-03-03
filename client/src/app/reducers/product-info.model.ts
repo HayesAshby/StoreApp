@@ -1,4 +1,5 @@
 export interface ProductInfoModel {
+    id: string;
     title: string;
     type: string;
     description: string;
@@ -7,4 +8,4 @@ export interface ProductInfoModel {
     width: number;
     price: number;
     rating: number;
-};
+}

@@ -1,0 +1,7 @@
+<mat-list-item role="listitem">
+    <span>{{product.title}}</span><br>
+    <span>{{product.price  | usCurrency}}</span><br>
+    <app-star-rating [rating]="product.rating"></app-star-rating>
+    <button mat-raised-button color="primary" (click)="handleItemDelete()">Delete</button>
+
+</mat-list-item>

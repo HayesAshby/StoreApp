@@ -4,7 +4,7 @@ import { data } from '../../../../assets/products.json';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsHttpService {
+export class ProductHttpService {
 
   constructor() { }
 

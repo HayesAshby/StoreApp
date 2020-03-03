@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable} from 'rxjs';
 import { ProductInfoModel } from 'src/app/reducers/product-info.model';
-import { ProductsService } from './services/products.service';
+import { ProductService } from './services/product.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit {
 
   public products$: Observable<ProductInfoModel[]> = this.service.getProductInfo();
 
-  constructor(private service: ProductsService) {}
+  constructor(private service: ProductService) {}
 
   ngOnInit() {
 

@@ -1,1 +1,9 @@
-<p>product-manager works!</p>
+<mat-list role="list">
+    <app-product-manager-item 
+        *ngFor="let product of products$ | async"
+        [product]="product"
+    >
+    </app-product-manager-item>
+
+  </mat-list>
+  

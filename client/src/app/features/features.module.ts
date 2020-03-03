@@ -13,10 +13,11 @@ import { SharedModule } from '../shared/shared.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ProductItemComponent } from './products/product-item/product-item.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { ProductManagerItemComponent } from './product-manager/product-manager-item/product-manager-item.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, ProductsComponent, ProductItemComponent, ProductManagerComponent],
+  declarations: [LayoutComponent, ProductsComponent, ProductItemComponent, ProductManagerComponent, ProductManagerItemComponent],
   imports: [
     CommonModule,
     MatSidenavModule,

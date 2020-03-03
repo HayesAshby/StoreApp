@@ -8,7 +8,7 @@ import { ProductInfoModel } from 'src/app/reducers/product-info.model';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
+export class ProductService {
   /**
    * The array of products returned by the http service
    */
@@ -28,8 +28,8 @@ export class ProductsService {
 
   }
 
-  deleteProduct(title) {
-    this.store.dispatch(deleteProduct({title}));
+  deleteProduct(id) {
+    this.store.dispatch(deleteProduct({id}));
   }
 
 

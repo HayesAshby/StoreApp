@@ -17,7 +17,7 @@ export const loadProductInfoFailure = createAction(
 
 export const deleteProduct = createAction(
   '[ProductInfo] Delete Product',
-  props<{title: string}>()
+  props<{id: string}>()
 );
 
 export const addProduct = createAction(

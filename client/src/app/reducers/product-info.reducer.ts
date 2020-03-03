@@ -33,7 +33,7 @@ const productInfoReducer = createReducer(
   on(
     deleteProduct,
     (state, action) => {
-      const remainingProducts = state.productInfo.filter((data) => data.title !== action.title);
+      const remainingProducts = state.productInfo.filter((data) => data.id !== action.id);
       return {
         ...state,
         productInfo: remainingProducts

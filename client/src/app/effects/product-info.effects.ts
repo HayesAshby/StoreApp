@@ -3,13 +3,13 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { loadProductInfo, loadProductInfoFailure, loadProductInfoSuccess } from '../actions/product-info.actions';
 import { mergeMap, map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { ProductsHttpService } from '../features/products/services/products-http.service';
+import { ProductHttpService } from '../features/products/services/product-http.service';
 
 
 @Injectable()
 export class ProductInfoEffects {
 
-  constructor(private actions$: Actions, private service: ProductsHttpService) { }
+  constructor(private actions$: Actions, private service: ProductHttpService) { }
 
   @Effect()
   getProductInfo$: Observable<any> = this.actions$.pipe(
