@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductInfoModel } from 'src/app/reducers/product-info.model';
-import { ProductService } from '../services/product.service';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-product-item',
@@ -23,7 +23,7 @@ public path;
     return this.service.addProduct(this.product.title);
   }
   handleItemDelete() {
-    return this.service.deleteProduct(this.product.title);
+    return this.service.deleteProduct(this.product.id);
   }
 
 }

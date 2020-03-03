@@ -3,8 +3,7 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { loadProductInfo, loadProductInfoFailure, loadProductInfoSuccess } from '../actions/product-info.actions';
 import { mergeMap, map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { ProductHttpService } from '../features/products/services/product-http.service';
-
+import { ProductHttpService } from '../shared/services/product-http.service';
 
 @Injectable()
 export class ProductInfoEffects {
