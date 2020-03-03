@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { State } from 'src/app/reducers';
+import { deleteProduct, addProduct } from 'src/app/actions/cards-info.actions';
 
 @Component({
   selector: 'app-catalog-item',
@@ -15,10 +18,17 @@ export class CatalogItemComponent implements OnInit {
 
 public path; // = `assets/images/${this.filename}`;
 
-  constructor() { }
+  constructor(private store: Store<State>) { }
 
   ngOnInit(): void {
     this.path = `assets/images/${this.filename}`;
+  }
+
+  handleAddToCart() {
+    this.store.dispatch(addProduct({title: this.title}));
+  }
+  handleItemDelete() {
+    this.store.dispatch(deleteProduct({title: this.title}));
   }
 
 }

@@ -1,5 +1,5 @@
 <mat-card class="catalog-item">
-    <img class="catalog-item-card" mat-card-image src={{path}} height="150px">
+    <img class="catalog-item-card" mat-card-image src={{path}}>
     <mat-card-content class="catalog-item-card">
          <span>{{title}}</span><br>
         <!-- {{description}} -->
@@ -10,6 +10,7 @@
 
 
     <mat-card-actions>
-        <button mat-raised-button color="primary">Add To Cart</button>
+        <button mat-raised-button color="primary" (click)="handleAddToCart()">Add To Cart</button>
+        <button mat-raised-button color="primary" (click)="handleItemDelete()">Delete</button>
     </mat-card-actions>
 </mat-card>

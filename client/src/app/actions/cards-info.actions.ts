@@ -15,10 +15,22 @@ export const loadCardsInfosFailure = createAction(
   props<{ error: Error }>()
 );
 
+export const deleteProduct = createAction(
+  '[CardsInfo] Delete Product',
+  props<{title: string}>()
+);
+
+export const addProduct = createAction(
+  '[CardsInfo] Add Product',
+  props<{title: string}>()
+);
+
 const actions = union({
   loadCardsInfos,
   loadCardsInfosSuccess,
-  loadCardsInfosFailure
+  loadCardsInfosFailure,
+  deleteProduct,
+  addProduct
 });
 
 export type CardInfoActions = typeof actions;
