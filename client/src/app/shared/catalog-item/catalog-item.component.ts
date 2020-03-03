@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/reducers';
-import { deleteProduct, addProduct } from 'src/app/actions/cards-info.actions';
+import { deleteProduct, addProduct } from 'src/app/actions/product-info.actions';
 
 @Component({
   selector: 'app-catalog-item',

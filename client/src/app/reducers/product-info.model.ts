@@ -1,4 +1,4 @@
-export type CardInfoModel = {
+export interface ProductInfoModel {
     title: string;
     type: string;
     description: string;
@@ -7,4 +7,4 @@ export type CardInfoModel = {
     width: number;
     price: number;
     rating: number;
-}
+};
