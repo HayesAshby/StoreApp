@@ -46,12 +46,12 @@ const productInfoReducer = createReducer(
       const product = state.productInfo.find((data) => data.title === action.title);
       return {
         ...state,
-        productInfo: [{...product}, ...state.productInfo]
+        productInfo: [{ ...product }, ...state.productInfo]
       };
     }
   )
 );
 
-export function reducer(state: ProductInfoState | undefined, action: Action) {
+export function productReducer(state: ProductInfoState | undefined, action: Action) {
   return productInfoReducer(state, action);
 }
