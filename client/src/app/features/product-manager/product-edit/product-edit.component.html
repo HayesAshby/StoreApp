@@ -1,0 +1,69 @@
+<mat-card class="product-edit">
+    <img class="product-edit-card" mat-card-image src={{path}}>
+    <mat-card-content class="product-edit-card"> 
+        <!-- form -->
+        <form [formGroup]="productForm">
+            <!-- id -->
+            <mat-form-field>
+                <mat-label for="id">
+                    Id:
+                </mat-label>
+                <input matInput type="text" formControlName="id">
+            </mat-form-field>
+
+            <!-- title -->
+            <mat-form-field>
+                <mat-label for="title">
+                    Title:
+                </mat-label>
+                <input matInput type="text" formControlName="title">
+            </mat-form-field>
+
+            <!-- type -->
+            <mat-form-field>
+                <mat-label for="type">
+                    Type:
+                </mat-label>
+                <input matInput type="text" formControlName="type">
+            </mat-form-field>
+
+            <!-- price -->
+            <mat-form-field>
+                <mat-label for="price">
+                    Price:
+                </mat-label>
+                <input matInput type="text" formControlName="price">
+            </mat-form-field>
+
+            <!-- rating -->
+            <mat-form-field>
+                <mat-label for="rating">
+                    Rating:
+                </mat-label>
+                <input matInput type="text" formControlName="rating">
+            </mat-form-field>
+
+            <!-- filename -->
+            <mat-form-field>
+                <mat-label for="filename">
+                    File Name:
+                </mat-label>
+                <input matInput type="text" formControlName="filename">
+            </mat-form-field>
+
+            <!-- description -->
+            <mat-form-field>
+                <mat-label for="description">
+                    Description:
+                </mat-label>
+                <input matInput type="text" formControlName="description">
+            </mat-form-field>
+
+        </form>
+        <!-- /form -->
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="primary">Delete</button>
+    </mat-card-actions>
+</mat-card>

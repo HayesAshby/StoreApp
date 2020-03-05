@@ -1,9 +1,29 @@
-<mat-list role="list">
-    <app-product-manager-item 
-        *ngFor="let product of products$ | async"
-        [product]="product"
-    >
-    </app-product-manager-item>
+<div class="container">
+    <div class="row">
 
-  </mat-list>
-  
+        <!-- column 1 -->
+        <div class="column">
+            <mat-list class="list" role="list">
+                <app-product-manager-item 
+                    *ngFor="let product of products$ | async"
+                    [product]="product"
+                    (selectedItemEvent)="handleSelectedItem($event)"
+                >
+                </app-product-manager-item>
+            </mat-list>
+        </div>
+        <!-- /column 1 -->
+
+        <!-- column 2 -->
+        <div class="column">
+            <!-- selectedItemEvent is catching the @Output event emitter
+                and calling a function with its data by sending its arguement through $event
+                required on child element to emit to this parent.
+            -->
+            <app-product-edit 
+                [productItem]="productItem" 
+                ></app-product-edit>
+        </div>
+        <!-- /column 2 -->
+    </div>
+</div>

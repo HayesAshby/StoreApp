@@ -1,0 +1,40 @@
+.container {
+
+    // TODO: fix position of parent container
+    // to allow column 1 to scroll and keep column 2 fixed
+
+    // position: relative;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    display: flex;  // no longer needed?
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+.list {
+    max-width: 400px;
+}
+
+.product-eidt-card {
+    form {
+        label {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+

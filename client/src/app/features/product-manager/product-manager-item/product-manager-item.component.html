@@ -1,4 +1,4 @@
-<mat-list-item role="listitem">
+<mat-list-item role="listitem" (click)="handleEmitItem()">
     <span>{{product.title}}</span><br>
     <span>{{product.price  | usCurrency}}</span><br>
     <app-star-rating [rating]="product.rating"></app-star-rating>

@@ -16,9 +16,20 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { ProductManagerItemComponent } from './product-manager/product-manager-item/product-manager-item.component';
 import { CartComponent } from './cart/cart.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { ProductEditComponent } from './product-manager/product-edit/product-edit.component';
 
 @NgModule({
-  declarations: [LayoutComponent, ProductsComponent, ProductItemComponent, ProductManagerComponent, ProductManagerItemComponent, CartComponent],
+  declarations: [
+    LayoutComponent,
+    ProductsComponent,
+    ProductItemComponent,
+    ProductManagerComponent,
+    ProductManagerItemComponent,
+    CartComponent,
+    ProductEditComponent,
+  ],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -30,6 +41,8 @@ import { CartComponent } from './cart/cart.component';
     SharedModule,
     MatGridListModule,
     MatCardModule,
+    ReactiveFormsModule,
+    MatInputModule
   ]
 })
 export class FeaturesModule { }

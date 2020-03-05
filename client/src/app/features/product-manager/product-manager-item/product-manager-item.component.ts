@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductInfoModel } from 'src/app/reducers/product-info.model';
 import { ProductService } from 'src/app/shared/services/product.service';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-manager-item',
@@ -9,9 +10,19 @@ import { ProductService } from 'src/app/shared/services/product.service';
 })
 export class ProductManagerItemComponent implements OnInit {
   @Input() product: ProductInfoModel;
+
+  // https://angular.io/guide/template-syntax#input-and-output-properties
+  @Output() selectedItemEvent = new EventEmitter<ProductInfoModel>();
+
   constructor(private service: ProductService) { }
 
   ngOnInit(): void {
+  }
+
+  // impure function - reference to this.product is not a passed argument.
+  handleEmitItem() {
+    console.log('emitting!')
+    this.selectedItemEvent.emit(this.product);
   }
 
   handleItemDelete() {
