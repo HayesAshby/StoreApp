@@ -12,6 +12,7 @@ export class ProductEditComponent implements OnInit {
   // TODO: refactor @Output in sibling and parent components to use a service instead
   // have the service use an observable and be able to update dynamically
   // with data to populate the form and also no data.
+  // https://coryrylan.com/blog/using-angular-forms-with-async-data
   @Input() public productItem: ProductInfoModel;
 
   public path: string;

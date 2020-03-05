@@ -21,7 +21,6 @@ export class ProductManagerItemComponent implements OnInit {
 
   // impure function - reference to this.product is not a passed argument.
   handleEmitItem() {
-    console.log('emitting!')
     this.selectedItemEvent.emit(this.product);
   }
 
